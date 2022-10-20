@@ -76,7 +76,7 @@ class Triangle extends Polygon {
   isValid() {
     return Array.isArray(this.sides) && this.sides.length === 3
       && this.sides.every((element) => element
-        < this.sides.reduce((sum, current) => sum + current) - element);
+        < this.perimeter() - element);
   }
 }
 
